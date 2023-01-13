@@ -1,38 +1,880 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  padding: 2rem 6rem 0 6rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.siteLogo {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: hsl(240, 100%, 5%);
+}
+
+.navLinkContainer {
+  display: flex;
+}
+
+.navLinks {
+  list-style: none;
+  margin: 1rem 2.2rem;
+  color: hsl(240, 100%, 5%);
+}
+
+.hambuger-icon {
+  display: none;
+}
+
+#categories {
+  margin-right: 0;
+}
+
+.navLinks:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+
+.firstImage {
+  height: 18rem;
+  width: 44rem;
+}
+
+.firstImage-mobile {
+  display: none;
+}
+
+.containerBelowImage {
+  display: flex;
+  justify-content: space-between;
+  width: 44rem;
+}
+
+.theBrightFutureText {
+  font-size: 50px;
+  font-weight: bolder;
+  width: 19rem;
+  color: hsl(240, 100%, 5%);
+  margin-top: 1rem;
+}
+
+.readMoreContainer {
+  width: 19.8rem;
+  font-size: 15px;
+}
+
+.readMoreText {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+
+.readMoreBtn {
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  border: none;
+  height: 3rem;
+  width: 12rem;
+  margin-top: 3rem;
+}
+
+.readMoreBtn:hover {
+  background-color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+
+.imageAndNewSectionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.NewContainer {
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+  width: 21rem;
+  height: 31.5rem;
+}
+
+.NewMargin {
+  margin: 0 3rem;
+}
+
+.newTitle {
+  margin-top: 2rem;
+  color: hsl(35, 77%, 62%);
+}
+
+.newSubTitle {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.newSubTitle:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.horizontalLn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: hsl(233, 8%, 79%);
+}
+
+.newParagraphs {
+  color: hsl(233, 8%, 79%);
+  line-height: 2rem;
+}
+
+.bottomSection {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.bottomSectionContainers {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 48rem;
+}
+
+.BSCimage {
+  height: 140px;
+  width: 200px;
+  margin-right: 1rem;
+}
+
+.numbers {
+  color: hsl(233, 8%, 79%);
+}
+
+.bottomTitles {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(240, 100%, 5%);
+}
+
+.bottomTitles:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+  transition: ease-in;
+}
+
+.bottomParagraphs {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5rem;
+}
+
+.midContainer {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media all and (max-width:320px) {
+
+  .App {
+    padding: 0 1rem 0 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .siteLogo {
+    font-size: 3rem;
+  }
+
+  .navBar {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: white;
+    position: fixed;
+    width: 18rem;
+  }
+
+  .hambuger-icon {
+    display: block;
+    margin-block: auto;
+  }
+
+  .navLinkContainer {
+    display: none;
+  }
+
+  .mobileNavLinkContainer {
+    display: block;
+    position: fixed;
+    width: 70vw;
+    height: 90vh;
+    background-color: white;
+    right: 0;
+    top: 12%;
+    font-size: 18px;
+  }
+
+  .imageAndNewSectionContainer {
+    display: block;
+  }
+
+  .containerBelowImage {
+    display: block;
+  }
+
+  .firstImage {
+    display: none;
+  }
+
+  .firstImage-mobile {
+    display: block;
+    width: 18rem;
+    height: 20rem;
+  }
+
+  .theBrightFutureText {
+    font-size: 46px;
+    width: 18rem;
+    margin-top: 1rem;
+  }
+
+  .readMoreContainer {
+    width: 18rem;
+  }
+
+  .readMoreText {
+    width: 18rem;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 1rem;
+  }
+
+  .readMoreBtn {
+    width: 8.4rem;
+    height: 2.5rem;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .NewContainer {
+    margin-top: 2rem;
+    width: 18rem;
+    padding-top: 2rem;
+    height: 560px;
+  }
+
+  .newTitle {
+    font-size: 32px;
+    margin-top: 0;
+  }
+
+  .NewMargin {
+    margin: 0 1rem;
+  }
+
+  .newSubTitle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .newParagraphs {
+    line-height: 2rem;
+  }
+
+  .horizontalLn {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .bottomSection {
+    display: block;
+  }
+
+  .midContainer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .containerBelowImage {
+    width: auto;
+  }
+
+  .bottomSectionContainers {
+    width: auto;
+  }
+
+  .BSCimage {
+    width: 140px;
+  }
+}
+
+
+@media all and (min-width:375px) {
+
+  .App {
+    padding: 0 1rem 0 1rem;
+  }
+
+  .siteLogo {
+    font-size: 3rem;
+  }
+
+  .navBar {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: white;
+    position: fixed;
+    width: 21.4rem;
+  }
+
+  .navLinkContainer {
+    display: none;
+  }
+
+  .mobileNavLinkContainer {
+    display: block;
+    position: fixed;
+    width: 70vw;
+    height: 90vh;
+    background-color: white;
+    right: 0;
+    top: 12%;
+    font-size: 18px;
+  }
+
+  .navLinks {
+    margin-bottom: 34px;
+  }
+
+  .hambuger-icon {
+    display: block;
+    margin-block: auto;
+    right: 0;
+  }
+
+  .imageAndNewSectionContainer {
+    display: block;
+  }
+
+  .containerBelowImage {
+    display: block;
+  }
+
+  .firstImage {
+    display: none;
+  }
+
+  .firstImage-mobile {
+    display: block;
+    width: 21.4rem;
+    height: 24rem;
+  }
+
+  .theBrightFutureText {
+    font-size: 54px;
+    width: 21.4rem;
+    margin-top: 1rem;
+  }
+
+  .readMoreContainer {
+    width: 18rem;
+  }
+
+  .readMoreText {
+    width: 21.4rem;
+    font-size: 19px;
+    line-height: 36px;
+    margin-top: 1rem;
+  }
+
+  .readMoreBtn {
+    width: 10.4rem;
+    height: 3.5rem;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .NewContainer {
+    margin-top: 2rem;
+    width: 21.4rem;
+    padding-top: 2rem;
+    height: 560px;
+  }
+
+  .newTitle {
+    font-size: 32px;
+    margin-top: 0;
+  }
+
+  .NewMargin {
+    margin: 0 1rem;
+  }
+
+  .newSubTitle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .newParagraphs {
+    line-height: 2rem;
+  }
+
+  .horizontalLn {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .bottomSection {
+    display: block;
+  }
+
+  .midContainer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .containerBelowImage {
+    width: auto;
+  }
+
+  .bottomSectionContainers {
+    width: auto;
+  }
+
+  .BSCimage {
+    width: 140px;
+  }
+}
+
+
+@media all and (min-width: 425px) {
+
+  .navBar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    position: fixed;
+    width: 24.49rem;
+  }
+
+  .firstImage-mobile {
+    display: block;
+    width: 24.49rem;
+    height: 22rem;
+  }
+
+  .theBrightFutureText {
+    width: 24.49rem;
+    font-size: 62px;
+    margin-top: 3rem;
+  }
+
+  .readMoreText {
+    width: 24.49rem;
+    font-size: 22px;
+    line-height: 40px;
+    margin-top: 3rem;
+  }
+
+  .readMoreBtn {
+    width: 12.4rem;
+    margin-top: 2rem;
+  }
+
+  .NewContainer {
+    width: 24.49rem;
+    height: 500px;
+    margin-top: 3rem;
+  }
+
+  .BSCimage {
+    width: 110px;
+  }
+}
+
+@media all and (min-width: 768px) {
+
+  .navBar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 0;
+    width: 95.6vw;
+  }
+
+  .hambuger-icon {
+    display: none;
+  }
+
+  .siteLogo {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: hsl(240, 100%, 5%);
+  }
+
+  .navLinkContainer {
+    display: flex;
+  }
+
+  .mobileNavLinkContainer {
+    display: none;
+  }
+
+  .navLinks {
+    list-style: none;
+    margin: 1rem 1rem;
+    color: hsl(240, 100%, 5%);
+  }
+
+  #categories {
+    margin-right: 0;
+  }
+
+
+  .navLinks:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+  }
+
+  .firstImage {
+    display: block;
+    height: 15rem;
+    width: 25rem;
+  }
+
+  .firstImage-mobile {
+    display: none;
+  }
+
+  .containerBelowImage {
+    display: flex;
+    justify-content: space-between;
+    width: 24rem;
+  }
+
+  .theBrightFutureText {
+    font-size: 32px;
+    font-weight: bolder;
+    width: auto;
+    color: hsl(240, 100%, 5%);
+    margin-top: 1rem;
+  }
+
+  .readMoreContainer {
+    width: auto;
+  }
+
+  .readMoreText {
+    color: hsl(236, 13%, 42%);
+    line-height: 1rem;
+    margin-top: 1rem;
+    font-size: 12px;
+    width: 12rem;
+  }
+
+  .readMoreBtn {
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    border: none;
+    height: 2rem;
+    width: 8rem;
+    margin-top: 0.5rem;
+    font-size: 10px;
+  }
+
+  .readMoreBtn:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+  }
+
+  .imageAndNewSectionContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .NewContainer {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    width: 19rem;
+    height: 24rem;
+    margin-top: 0;
+  }
+
+  .NewMargin {
+    margin: 0 1.5rem;
+  }
+
+  .newTitle {
+    margin-top: 0;
+    font-size: 24px;
+    color: hsl(35, 77%, 62%);
+  }
+
+  .newSubTitle {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 14px;
+  }
+
+  .newSubTitle:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+  }
+
+  .horizontalLn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: hsl(233, 8%, 79%);
+  }
+
+  .newParagraphs {
+    color: hsl(233, 8%, 79%);
+    line-height: 1.3rem;
+    font-size: 14px;
+  }
+
+  .bottomSection {
+    display: flex;
+    margin-top: 4rem;
+  }
+
+  .bottomSectionContainers {
+    display: flex;
+    margin-bottom: 2rem;
+    width: 48rem;
+  }
+
+  .BSCimage {
+    height: 120px;
+    width: 80px;
+    margin-right: 0.5rem;
+  }
+
+  .numbers {
+    color: hsl(233, 8%, 79%);
+  }
+
+  .bottomTitles {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    color: hsl(240, 100%, 5%);
+  }
+
+  .bottomTitles:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+    transition: ease-in;
+  }
+
+  .bottomParagraphs {
+    color: hsl(236, 13%, 42%);
+    line-height: 1rem;
+    font-size: 12px;
+  }
+
+  .midContainer {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media all and (min-width:1024px){
+
+  .App{
+    padding: 0.5rem 2rem 0 2rem;
+  }
+
+  .navBar{
+    width: 93.6vw;
+  }
+
+  .firstImage{
+    height: 20rem;
+    width: 39rem;
+  }
+
+  .containerBelowImage{
+    width: 39rem;
+  }
+
+  .theBrightFutureText{
+    font-size: 70px;
+  }
+
+  .readMoreText{
+    width: 276px;
+    margin-top: 2rem;
+    line-height: 2rem;
+    font-size: 18px;
+  }
+
+  .readMoreBtn{
+    width: 10rem;
+    height: 3rem;
+  }
+
+  .NewContainer{
+    height: 35rem;
+  }
+
+  .horizontalLn{
+    margin: 2rem 1.5rem;
+  }
+
+  .newTitle{
+    font-size: 30px;
+  }
+
+  .newSubTitle{
+    font-size: 18px;
+  }
+
+  .newParagraphs{
+    line-height: 2rem;
+    font-size: 16px;
+  }
+
+  .BSCimage{
+    width: 94px;
+  }
+
+  .bottomParagraphs{
+    font-size: 17px;
+    line-height: 1.6rem;
+  }
+}
+
+@media all and (min-width:1366px){
+
+  .App{
+    padding: 1.3rem 2rem 0 2rem;
+  }
+
+  .navBar{
+    width: 94.4vw;
+  }
+
+  .siteLogo{
+    font-size: 5rem;
+  }
+
+  .navLinks{
+    font-size: 28px;
+    margin: 2rem 2rem;
+  }
+
+  .navLinkContainer{
+    align-items: center;
+  }
+
+  .firstImage{
+    height: 26rem;
+    width: 48rem;
+  }
+
+  .containerBelowImage{
+    width: 48rem;
+  }
+
+  .theBrightFutureText{
+    font-size: 88px;
+  }
+
+  .readMoreText{
+    width: 340px;
+    margin-top: 2rem;
+    line-height: 2rem;
+    font-size: 22px;
+  }
+
+  .readMoreBtn{
+    width: 11rem;
+    height: 4rem;
+    font-size: 14px;
+    margin-top: 2.5rem;
+  }
+
+  .NewContainer{
+    height: 46rem;
+    width: 29rem;
+  }
+
+  .NewMargin{
+    margin: 1rem 2.5rem;
+  }
+
+  .horizontalLn{
+    margin: 3rem 1.5rem;
+  }
+
+  .newTitle{
+    font-size: 46px;
+  }
+
+  .newSubTitle{
+    font-size: 26px;
+  }
+
+  .newParagraphs{
+    line-height: 2.5rem;
+    font-size: 24px;
+  }
+
+  .BSCimage{
+    width: 150px;
+    height: 170px;
+    margin-right: 1.5rem;
+  }
+
+  .bottomParagraphs{
+    font-size: 22px;
+    line-height: 2rem;
+  }
+
+  .midContainer{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .bottomSectionContainers{
+    width: auto;
+    align-items: center;
+  }
+
+  .numbers{
+    font-size: 34px;
+  }
+
+  .bottomTitles{
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width:1440px){
+
+  .navBar{
+    width: 95.6vw;
+  }
+
+  .firstImage{
+    height: 26rem;
+    width: 51rem;
+  }
+
+  .containerBelowImage{
+    width: 51rem;
+  }
+
+  .NewContainer{
+    height: 46rem;
+    width: 32rem;
   }
 }
